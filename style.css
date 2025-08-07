@@ -1,0 +1,172 @@
+/* General Body Styles */
+body {
+  background-color: #000000;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Glow Effect */
+.glow {
+  text-shadow: 
+    0 0 8px rgba(255, 255, 255, 0.3),
+    0 0 16px rgba(255, 255, 255, 0.2),
+    0 0 24px rgba(255, 255, 255, 0.1);
+}
+
+.glow {
+  text-shadow: 
+    0 0 5px rgba(255, 255, 255, 0.3),
+    0 0 10px rgba(255, 255, 255, 0.2),
+    0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+
+/* Floating Squares */
+.floating-square {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  opacity: 0.07;
+  animation: floatSpin 20s ease-in-out infinite alternate;
+}
+
+@keyframes floatSpin {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(-20px) rotate(360deg); }
+}
+
+    .hero-section::before {
+      content: "";
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      width: 450px;
+      height: 460px;
+      background: url('Vicious.gif') center center no-repeat;
+      background-size: contain;
+      transform: translateX(-50%);
+      opacity: 0.15;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+/* Hero Section Styling */
+.hero-section {
+  padding-top: 10vh;
+}
+
+/* Button Hover Animation */
+.btn-hover:hover {
+  background-color: #1a1a1a;
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-advanced {
+  background: linear-gradient(135deg, #6EE7B7, #3B82F6, #9333EA);
+  border: none;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.btn-advanced:hover {
+  background: linear-gradient(135deg, #9333EA, #3B82F6, #6EE7B7);
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Glassmorphism Card */
+.expertise-card {
+  background: rgba(15, 15, 15, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Button Glowing Pulse */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(255,255,255,0.15), 0 0 16px rgba(255,255,255,0.05);
+  }
+  50% {
+    box-shadow: 0 0 12px rgba(255,255,255,0.25), 0 0 24px rgba(255,255,255,0.1);
+  }
+}
+
+.glow-button {
+  animation: pulseGlow 3s infinite ease-in-out;
+}
+
+/* Glow Effect on Section Titles */
+.top-glow-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.35);
+  z-index: 999;
+  pointer-events: none;
+}
+
+/* Floating Squares for Visual Depth */
+.floating-square {
+  animation: floatSpin 20s ease-in-out infinite alternate;
+}
+
+/* Subtle Starry Parallax Background */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('https://www.transparenttextures.com/patterns/stardust.png');
+  opacity: 0.03;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Scroll Top Button */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #1f1f1f;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 999px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  z-index: 50;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+#scrollTopBtn.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.progress-bar-container {
+  width: 100%;
+  background-color: #2d2d2d;
+  border-radius: 25px;
+  height: 8px;
+  margin-top: 10px;
+  position: relative;
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: 25px;
+  transition: width 2s ease-out;
+}
